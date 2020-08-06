@@ -8,7 +8,7 @@ Nesse case, você terá a oportunidade de testar uma funcionalidade existente no
 
 ## Configuração inicial
 
-Antes de tudo, faça fork desse repositório em sua conta e em seguida clone em sua máquina.
+Antes de tudo, baixe esse repositório em sua máquina.
 
 Certifique-se de que você possui as seguintes dependências devidamente instaladas na sua máquina:
 
