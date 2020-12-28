@@ -61,8 +61,14 @@ Certifique-se de que você possui as seguintes dependências devidamente instala
 
 ### item 1.
 
-O site do [enjoei](http://www.enjoei.com.br) apresenta em sua página inicial uma seção que geralmente tem o título **"é desconto que você quer?"** e nela são listadas algumas faixas de preços de produtos que estão a venda, permitindo assim que o usuário categorize a exibição de produtos segundo um _preço máximo_. 
+O site do [enjoei](http://www.enjoei.com.br) apresenta em sua página inicial uma seção que geralmente tem o título **"é desconto que você quer?"** e nela são listadas algumas faixas de preços de produtos que estão a venda, permitindo assim que o usuário categorize a exibição de produtos segundo um _preço máximo_. Pode ser que a seção **é desconto que você quer?** esteja dando lugar a alguma outra, como **hoje a festa é sua**/_festival de descontos_ ou **montão de desconto**.
+
   ![seção de desconto](readme/desconto.png)
+  ![seção de desconto alternativa](readme/desconto2.png)
+  ![mais uma seção de desconto](readme/desconto3.png)
+
+  Caso você não encontre nenhuma seção com esse título, use qualquer outra seção de desconto existente que esteja em formato semelhante às exibidas anteriormente: uma grade com alguns descontos, geralmente identificados por "até R$ X".
+
   Nós queremos que você teste essa funcionalidade. No arquivo `features/max_price/max_price.feature` há uma descrição do teste no formato [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development). Seu trabalho é implementar em Ruby os passos descritos, utilizando [Capybara](https://github.com/teamcapybara/capybara#using-capybara-with-cucumber) para descrever o que deve acontecer em cada um deles. Se a etapa de configuração do ambiente funcionou, então você já instalou essa ferramenta em seu ambiente.
 
   Seu teste deve escolher _aleatoriamente_ um dos preços máximos listados e então, ao clicar nesse preço, verificar se nenhum dos produtos tem preço que ultrapassa esse valor. Escreva seu código com clareza e organização. Sinta-se a vontade para modularizar o seu programa.
