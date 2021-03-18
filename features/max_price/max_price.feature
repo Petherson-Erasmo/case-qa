@@ -1,4 +1,5 @@
 Feature: Website shows products at their maximum prices
+  @smoke
   Scenario: Choose maximum price from home page
     Given I am on home page
     And I choose some maximum product price
