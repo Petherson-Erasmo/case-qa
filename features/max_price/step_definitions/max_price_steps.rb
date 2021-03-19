@@ -1,6 +1,5 @@
 Given('I am on home page') do
   visit 'https://www.enjoei.com.br'
-  expect(page).to have_css "div.t-text-right .o-grid__item:nth-child(8) a[href='/usuario/identifique-se']"
 end
 
 Given('I choose some maximum product price') do
@@ -11,6 +10,8 @@ Given('I choose some maximum product price') do
   list_max_price = div.all(".c-content-widget__item")
   index = rand(list_max_price.size)
   @item_max_price = list_max_price[index]
+
+  @price = @item_max_price.text.split(" ").last
 end
 
 When('I click in this price category') do
@@ -18,6 +19,9 @@ When('I click in this price category') do
 end
 
 Then('I should only see products no more expensive than the choosen price') do
-  # YOUR SOLUTION HERE
-  pending
+  catalog = find(:css, ".-md-gutter-large")
+  catalog.all("span[data-test='div-preco'] span:nth-child(1)").each do |item|
+    product_price = item.text.split(" ").last
+    expect(product_price.to_i).to be <= @price.to_i
+  end
 end
