@@ -16,7 +16,8 @@ When('I click in this price category') do
 end
 
 Then('I should only see products no more expensive than the choosen price') do
-  expect(find(:xpath, "//span[contains(text(),'não encontramos nadinha, mas não fica triste. que')]", visible: false).visible?).to be false
+  
+  expect(page.has_text?('não encontramos nadinha,')).to eq false
 
   @search_filter.get_catolog.each do |item|
     product_price = @search_filter.get_product_price(item)
